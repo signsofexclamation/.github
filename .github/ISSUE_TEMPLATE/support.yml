@@ -1,0 +1,48 @@
+name: support request
+description: get help with one of our apps
+title: "[support] "
+labels: ["support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        thanks for reaching out. tell us which app and what's going on — that's all we need.
+        please don't include anything personal; you don't need an account or your identity to get help.
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: which app
+      description: pick the app this is about.
+      options:
+        - whatpeoplethink
+        - whentowake
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: what's going on
+      description: describe the problem, question, or feedback.
+      placeholder: what happened, and what you expected instead.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: app version
+      description: optional. shown at the bottom of the app's menu.
+      placeholder: e.g. 1.0.0
+    validations:
+      required: false
+
+  - type: input
+    id: device
+    attributes:
+      label: device & ios version
+      description: optional, but helps with bugs.
+      placeholder: e.g. iphone 14, ios 18.2
+    validations:
+      required: false
