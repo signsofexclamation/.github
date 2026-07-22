@@ -1,6 +1,5 @@
 name: support request
 description: get help with one of our apps
-title: "[support] "
 labels: ["support"]
 body:
   - type: markdown

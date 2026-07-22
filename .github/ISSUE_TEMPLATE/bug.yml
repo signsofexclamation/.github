@@ -1,0 +1,65 @@
+name: bug report
+description: something in an app isn't working right
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        thanks for reporting. the more precise the steps, the faster it gets fixed.
+        please don't include anything personal — you don't need your identity to file a bug.
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: which app
+      description: pick the app this is about.
+      options:
+        - whatpeoplethink
+        - whentowake
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: what happened
+      description: describe the bug.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: steps to reproduce
+      description: what you did, in order, right before it happened.
+      placeholder: |
+        1. opened the app
+        2. tapped submit
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: what you expected instead
+      description: optional.
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: app version
+      description: shown at the bottom of the app's menu.
+      placeholder: e.g. 1.0.0
+    validations:
+      required: false
+
+  - type: input
+    id: device
+    attributes:
+      label: device & ios version
+      placeholder: e.g. iphone 14, ios 18.2
+    validations:
+      required: false
